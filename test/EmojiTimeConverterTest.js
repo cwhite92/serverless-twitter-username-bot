@@ -24,13 +24,5 @@ describe("EmojiTimeConverter", () => {
                 expect(result).toEqual("\ud83d\udd5e");
             }
         });
-        // it("tests", () => {
-        //     let emojiTimeConverter = new EmojiTimeConverter();
-        //     let date = new Date();
-        //     date.setMinutes(0);
-        //     let result = emojiTimeConverter.emojiForTime(date);
-        //
-        //     console.log(result);
-        // });
     });
 });

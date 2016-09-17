@@ -1,4 +1,10 @@
 export default class EmojiTimeConverter {
+    /**
+     * Holds the mappings between times and emoji that represents those times.
+     * First object holds the hours, inner objects hold the minutes.
+     *
+     * @type Object
+     */
     mappings: Object = {
         0: {0: '\ud83d\udd5b', 30: '\ud83d\udd67'},
         1: {0: '\ud83d\udd50', 30: '\ud83d\udd5c'},
@@ -26,18 +32,36 @@ export default class EmojiTimeConverter {
         23: {0: '\ud83d\udd5a', 30: '\ud83d\udd66'}
     };
 
+    /**
+     * Converts a Javascript Date object into an emoji representing that time.
+     *
+     * @param time
+     * @returns {string}
+     */
     public emojiForTime(time: Date): string {
-        time = this.roundToNearestHalfHour(time);
+        time = this.floorToNearestHalfHour(time);
 
         return this.mapToEmoji(time);
     }
 
-    protected roundToNearestHalfHour(time: Date): Date {
+    /**
+     * Floors a Javascript Date object to the last 30 minute increment.
+     *
+     * @param time
+     * @returns {Date}
+     */
+    protected floorToNearestHalfHour(time: Date): Date {
         let x = 1000 * 60 * 30;
 
         return new Date(time.getTime() - (time.getTime() % x));
     }
 
+    /**
+     * Maps the given Javascript date object to an emoji.
+     *
+     * @param time
+     * @returns {any}
+     */
     protected mapToEmoji(time: Date): string {
         let hour = time.getHours();
         let minute = time.getMinutes();
