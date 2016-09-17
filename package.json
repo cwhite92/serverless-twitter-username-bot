@@ -1,0 +1,9 @@
+{
+  "name": "twitter-username-bot",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-jasmine": "^2.4.1",
+    "gulp-typescript": "^2.13.6",
+    "jasmine": "^2.5.2"
+  }
+}
