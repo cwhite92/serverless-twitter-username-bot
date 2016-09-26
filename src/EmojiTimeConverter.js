@@ -66,5 +66,4 @@ class EmojiTimeConverter {
         return this.mappings[hour][minute];
     }
 }
-Object.defineProperty(exports, "__esModule", { value: true });
 exports.default = EmojiTimeConverter;

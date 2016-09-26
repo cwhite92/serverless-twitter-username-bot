@@ -1,8 +1,10 @@
 {
   "compilerOptions": {
-    "module": "commonjs",
+    "module": "none",
     "target": "es6",
-    "moduleResolution": "node"
+    "moduleResolution": "node",
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true
   },
   "exclude": [
     "node_modules"

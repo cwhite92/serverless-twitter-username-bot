@@ -1,1 +1,6 @@
 node_modules/
+.serverless/
+functions/**/*.js
+src/**/*.js
+test/**/*.js
+secrets.json

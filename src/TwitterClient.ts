@@ -32,10 +32,10 @@ export default class TwitterClient {
      * Sets the profile name for the authenticated user.
      *
      * @param name
-     * @returns {Promise}
+     * @returns {Promise<void>}
      */
-    public async setName(name: string): Promise {
-        return new Promise((resolve, reject) => {
+    public async setName(name: string): Promise<void> {
+        return new Promise<void>((resolve, reject) => {
             this.client.post('account/update_profile', {name: name}, function(error) {
                 if (error) {
                     reject(error);

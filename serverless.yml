@@ -31,8 +31,10 @@ provider:
 #  artifact: my-service-code.zip
 
 functions:
-  hello:
-    handler: handler.hello
+  updateusername:
+    handler: functions/UpdateUsername.run
+    events:
+      - schedule: rate(1 minute)
 
 #   you can add any of the following events
 #   events:

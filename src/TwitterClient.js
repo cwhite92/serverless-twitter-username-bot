@@ -33,7 +33,7 @@ class TwitterClient {
      * Sets the profile name for the authenticated user.
      *
      * @param name
-     * @returns {Promise}
+     * @returns {Promise<void>}
      */
     setName(name) {
         return __awaiter(this, void 0, Promise, function* () {
@@ -48,5 +48,4 @@ class TwitterClient {
         });
     }
 }
-Object.defineProperty(exports, "__esModule", { value: true });
 exports.default = TwitterClient;
