@@ -1,5 +1,6 @@
 node_modules/
 .serverless/
+typings/
 functions/**/*.js
 src/**/*.js
 test/**/*.js
